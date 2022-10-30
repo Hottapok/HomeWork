@@ -27,13 +27,17 @@ public class Recipe {
 
 
     public void addProduct(Product name , Integer value){
+
+        if (name.equals(products)){
+            throw new RuntimeException("Такой продукт есть");
+        }else {
         if (value<=0){
-            value=1;
-            products.put(name, value);
+            products.put(name, 1);
         }else {
             products.put(name,value);
         }
         totalCost+= name.getCost()*value;
+    }
     }
     public void printRecipes(){
         System.out.println(getName()+" общая стоимость продуктов "+getTotalCost());

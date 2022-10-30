@@ -1,3 +1,4 @@
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -57,14 +58,14 @@ public class Main {
         newMap.printNewMap(homeWork,homeWork3,homeWork2);
 
 
-        Map<Integer,String> random = new TreeMap<>();
+        Map<Integer,String> random = new LinkedHashMap<>();
         random.put(110,"120");
-        random.put(111,"111");
-        random.put(112,"112");
-        random.put(113,"113");
         random.put(114,"114");
         random.put(115,"115");
         random.put(116,"116");
+        random.put(111,"111");
+        random.put(112,"112");
+        random.put(113,"113");
         random.put(117,"117");
         random.put(118,"118");
         random.put(119,"119");

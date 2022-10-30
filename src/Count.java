@@ -4,20 +4,16 @@ import java.util.Map;
 public class Count {
     Map<String, Integer> map = new HashMap<>();
 
-    public void addMap(String string, Integer integer) throws RuntimeException{
+    public void addMap(String string, Integer integer){
 
 
         for (String key : map.keySet()) {
             Integer value = map.get(key);
-            if (!map.containsKey(string)) {
-                map.put(string, integer);
-            } if (map.containsKey(string) && integer.equals(value) ) {
+            if (map.containsKey(string) && integer.equals(value) ) {
                 throw new RuntimeException("Значения совпадают");
-            } else if (map.containsKey(string) && !integer.equals(value)){
+            } else if (!map.containsKey(string) || !integer.equals(value)){
                 map.put(string, integer);
             }
-
-
         }
 
     }
