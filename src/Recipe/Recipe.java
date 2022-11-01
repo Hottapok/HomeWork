@@ -27,8 +27,7 @@ public class Recipe {
 
 
     public void addProduct(Product name , Integer value){
-
-        if (name.equals(products)){
+        if (products.containsKey(name)){
             throw new RuntimeException("Такой продукт есть");
         }else {
         if (value<=0){

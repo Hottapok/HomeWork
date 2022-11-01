@@ -11,9 +11,8 @@ public class Count {
             Integer value = map.get(key);
             if (map.containsKey(string) && integer.equals(value) ) {
                 throw new RuntimeException("Значения совпадают");
-            } else if (!map.containsKey(string) || !integer.equals(value)){
-                map.put(string, integer);
             }
+                map.put(string, integer);
         }
 
     }

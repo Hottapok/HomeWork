@@ -1,6 +1,4 @@
-import java.util.LinkedHashMap;
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -47,15 +45,46 @@ public class Main {
         phoneBook.addNumber(people18);
         phoneBook.addNumber(people19);
         phoneBook.addNumber(people20);
-        System.out.println(phoneBook);
+//        System.out.println(phoneBook);
 
 
-        HomeWork2 homeWork2 =new HomeWork2("123");
-        HomeWork2 homeWork3 =new HomeWork2("100");
-        HomeWork2 homeWork =new HomeWork2("500");
-
-        NewMap newMap=new NewMap();
-        newMap.printNewMap(homeWork,homeWork3,homeWork2);
+        Map<String, List<Integer>> map = new HashMap<>();
+        Map<String,Integer> newMap = new HashMap<>();
+        List<Integer> list1 = new ArrayList<>();
+        for (int i =0 ; i<3;i++){
+            list1.add(((int) (Math.random()*((1000-0)+1))+0));
+        }
+        List<Integer> list2 = new ArrayList<>();
+        for (int i =0 ; i<3;i++){
+            list2.add(((int) (Math.random()*((1000-0)+1))+0));
+        }
+        List<Integer> list3 = new ArrayList<>();
+        for (int i =0 ; i<3;i++){
+            list3.add(((int) (Math.random()*((1000-0)+1))+0));
+        }
+        List<Integer> list4 = new ArrayList<>();
+        for (int i =0 ; i<3;i++){
+            list4.add(((int) (Math.random()*((1000-0)+1))+0));
+        }
+        List<Integer> list5 = new ArrayList<>();
+        for (int i =0 ; i<3;i++){
+            list5.add(((int) (Math.random()*((1000-0)+1))+0));
+        }
+        map.put("String1",list1);
+        map.put("String2",list2);
+        map.put("String3",list3);
+        map.put("String4",list4);
+        map.put("String5",list5);
+        System.out.println(map);
+        for (String key: map.keySet()) {
+            Integer sum =0;
+            List <Integer> listSum = map.get(key);
+            for (Integer integer : listSum){
+                sum+=integer;
+            }
+            newMap.put(key,sum);
+        }
+        System.out.println(newMap);
 
 
         Map<Integer,String> random = new LinkedHashMap<>();
@@ -69,6 +98,6 @@ public class Main {
         random.put(117,"117");
         random.put(118,"118");
         random.put(119,"119");
-        System.out.println(random);
+//        System.out.println(random);
     }
 }
